@@ -116,8 +116,8 @@ var config: { [key: string]: mixed } = {
             !!process.versions.node &&
             !process.version.electron),
   REQUEST_ATTEMPT_LIMIT: 5,
-  SERVER_URL: 'https://api.parse.com/1',
-  LIVEQUERY_SERVER_URL: null,
+  SERVER_URL: process.env.SERVER_URL || 'https://api.parse.com/1',
+  LIVEQUERY_SERVER_URL: process.env.LIVE_QUERY_SERVER_URL,
   VERSION: 'js' + require('../package.json').version,
   APPLICATION_ID: null,
   JAVASCRIPT_KEY: null,
